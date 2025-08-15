@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #f0f4f8, #d8e8f9);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.85)),
+                url('TravelBanner.jpg') center/cover no-repeat;
+    color: white;
+    padding: 40px 0 30px;
+    text-align:center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.322);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease-out;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 221, 87, 0.9);
+    color: #2c3e50;
+    transform: translateY(-3px);
+}
+
+/* SECTION */
+section {
+    max-width: 1000px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 14px;
+    text-align:center;
+}
+
+th {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(240, 244, 248, 0.9);
+}
+
+tr:hover {
+    background-color: rgba(227, 242, 253, 0.8);
+    transition: background 0.3s ease;
+}
+
+/* FORMS */
+form label {
+    display:block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+form button {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.4s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.gallery figure {
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery figure:hover {
+    transform: translateY(-5px);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery figure:hover img {
+    transform: scale(1.1);
+}
+
+.gallery figcaption {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery figure:hover figcaption {
+    opacity: 1;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
